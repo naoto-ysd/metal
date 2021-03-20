@@ -12,10 +12,7 @@
 */
 
 Route::get('/', function () {
-    // return view('welcome');
-    return view('helloworld');
+    return view('welcome');
 });
 
-Route::get('hello', function () {
-    return '<html><body><h1>Hello</h1><p> This is simple page. </p></body></html>';
-});
+Route::get('hello/{id?}/{pass?}', "HelloController@index");
